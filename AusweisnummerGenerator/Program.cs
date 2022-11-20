@@ -1,7 +1,7 @@
 ﻿string behördenkennzahl = Ask("Behördenkennzahl (Bad Kreuznach = 2053):") ?? "2053";
-string laufendeNummer = Ask("Fortlaufende Ausweisnummer (10000 - 99999)") ?? "49999";
-string geburtsDatum = Ask("Geburtsdatum 19(JahrMonatTag) 040502 = 2004 Mai 2") ?? "040502";
-string ablaufDatum = Ask("Ablaufdatum 20(JahrMonatTag)") ?? "230502";
+string laufendeNummer = Ask("Fortlaufende Ausweisnummer (10000 - 99999):") ?? "49999";
+string geburtsDatum = Ask("Geburtsdatum 19(JahrMonatTag) 040502 = 2004 Mai 2:") ?? "040502";
+string ablaufDatum = Ask("Ablaufdatum 20(JahrMonatTag):") ?? "230502";
 
 string? Ask(string what) {
     Console.Write(what + "\n");
