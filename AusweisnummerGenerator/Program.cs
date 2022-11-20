@@ -30,7 +30,7 @@ int gesamt = prüfziffer(behördenkennzahl + laufendeNummer + block1.ToString() 
 
 Console.WriteLine(@$"
 Alter Personalausweiß
-{behördenkennzahl+laufendeNummer+block1.ToString()}<<{geburtsDatum+block2.ToString()}<{ablaufDatum+block3.ToString()}<<<<<<<{gesamt}
+{behördenkennzahl+laufendeNummer+block1.ToString()}D<<{geburtsDatum+block2.ToString()}<{ablaufDatum+block3.ToString()}<<<<<<<{gesamt}
 
 Drücke eine Taste um zu beenden");
 Console.ReadLine();
