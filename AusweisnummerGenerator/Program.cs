@@ -2,6 +2,7 @@ string behördenkennzahl = Ask("Behördenkennzahl (Bad Kreuznach = 2053):") ?? "
 string laufendeNummer = Ask("Fortlaufende Ausweisnummer (10000 - 99999):") ?? "49999";
 string geburtsDatum = Ask("Geburtsdatum 19(JahrMonatTag) 980502 = 1998 Mai 2:") ?? "980502";
 string ablaufDatum = Ask("Ablaufdatum 20(JahrMonatTag):") ?? "230502";
+string geschlecht = Ask("Geschlecht (M = Männlich, F = Weiblich):") ?? "M"; // M 22 W32
 string version = "2108";
 
 string? Ask(string what) {
@@ -36,11 +37,14 @@ int neuer_gesamt = prüfziffer(behördenkennzahl + laufendeNummer + block1.ToStr
 
 Console.WriteLine(@$"
 Alter Personalausweis
-{behördenkennzahl+laufendeNummer+block1.ToString()}D<<{geburtsDatum+block2.ToString()}<{ablaufDatum+block3.ToString()}<<<<<<<{gesamt}
+{behördenkennzahl + laufendeNummer + block1.ToString()}D<<{geburtsDatum + block2.ToString()}<{ablaufDatum + block3.ToString()}<<<<<<<{gesamt}
 
 Neuer Personalausweis (BETA Nicht getestet)
 IDD<<{behördenkennzahl+laufendeNummer+block1.ToString()}<<<<<<<<<<<<<<<
 <<{geburtsDatum+block2.ToString()}<{ablaufDatum+block3.ToString()}D<<{neuer_block4}<<<<<<<{neuer_gesamt}
+
+Reisepass (BETA Nicht getestet)
+{behördenkennzahl + laufendeNummer + block1.ToString()}D<<{geburtsDatum + block2.ToString() + geschlecht + ablaufDatum + block3.ToString()}<<<<<<<<<<<<<<<{gesamt}
 
 Drücke eine Taste um zu beenden");
 Console.ReadLine();
