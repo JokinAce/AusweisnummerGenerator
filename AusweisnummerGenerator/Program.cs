@@ -31,7 +31,7 @@ int block3 = prüfziffer(ablaufDatum);
 int gesamt = prüfziffer(behördenkennzahl + laufendeNummer + block1.ToString() + geburtsDatum + block2.ToString() + ablaufDatum + block3.ToString());
 
 int neuer_block4 = prüfziffer(version);
-int neuer_gesamt = prüfziffer(behördenkennzahl + laufendeNummer + block1.ToString() + geburtsDatum + block2.ToString() + ablaufDatum + block3.ToString() + version + neuer_block4);
+int neuer_gesamt = prüfziffer(behördenkennzahl + laufendeNummer + block1.ToString() + geburtsDatum + block2.ToString() + ablaufDatum + block3.ToString() + version + neuer_block4.ToString());
 
 // https://de.wikipedia.org/wiki/Ausweisnummer
 
