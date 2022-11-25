@@ -1,4 +1,4 @@
-﻿string behördenkennzahl = Ask("Behördenkennzahl (Bad Kreuznach = 2053):") ?? "2053";
+string behördenkennzahl = Ask("Behördenkennzahl (Bad Kreuznach = 2053):") ?? "2053";
 string laufendeNummer = Ask("Fortlaufende Ausweisnummer (10000 - 99999):") ?? "49999";
 string geburtsDatum = Ask("Geburtsdatum 19(JahrMonatTag) 980502 = 1998 Mai 2:") ?? "980502";
 string ablaufDatum = Ask("Ablaufdatum 20(JahrMonatTag):") ?? "230502";
@@ -28,9 +28,15 @@ int block3 = prüfziffer(ablaufDatum);
 
 int gesamt = prüfziffer(behördenkennzahl + laufendeNummer + block1.ToString() + geburtsDatum + block2.ToString() + ablaufDatum + block3.ToString());
 
+// https://de.wikipedia.org/wiki/Ausweisnummer
+
 Console.WriteLine(@$"
-Alter Personalausweiß
+Alter Personalausweis
 {behördenkennzahl+laufendeNummer+block1.ToString()}D<<{geburtsDatum+block2.ToString()}<{ablaufDatum+block3.ToString()}<<<<<<<{gesamt}
+
+Neuer Personalausweis (BETA Nicht getestet)
+IDD<<{behördenkennzahl+laufendeNummer+block1.ToString()}<<<<<<<<<<<<<<<
+<<{geburtsDatum+block2.ToString()}<{ablaufDatum+block3.ToString()}D<<2108<<<<<<<{gesamt}
 
 Drücke eine Taste um zu beenden");
 Console.ReadLine();
